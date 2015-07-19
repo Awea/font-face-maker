@@ -7,7 +7,7 @@ From a otf, generate the required ttf, eot, woff, svg and css for the font to be
 ### Usage
 
 ```shell
-make FONT_PATH=/Users/awea/Downloads/AGaramondPro-Semibold.otf
+make FONT_PATH=/path/to/a_font.otf
 ```
 
 ### Requirements
