@@ -12,7 +12,15 @@ make FONT_PATH=/path/to/a_font.{otf || ttf}
 
 ### Requirements
 
-* On OS X, install with brew:
-  * fontforge
-  * ttf2eot
-  * batik-ttf2svg (batik)
+* fontforge
+* ttf2eot
+* batik-ttf2svg 
+
+#### OS X installation
+
+On OS X, install with [homebrew](http://brew.sh/):
+
+`brew install fontforge ttf2eot batik`
+`brew tap bramstein/webfonttools`
+`brew update`
+`brew install woff2`
