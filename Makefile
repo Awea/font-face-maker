@@ -48,7 +48,7 @@ generateCss:
 	@echo	"    src: url('$(call NEW_FILE_NAME,.eot)?#iefix') format('embedded-opentype')," >> dest/$(CSS_FILE)
 	@echo	"         url('$(call NEW_FILE_NAME,.woff2)') format('woff2')," >> dest/$(CSS_FILE)
 	@echo	"         url('$(call NEW_FILE_NAME,.woff)') format('woff')," >> dest/$(CSS_FILE)
-	@echo	"         url('$(call NEW_FILE_NAME,.ttf)') format("truetype")," >> dest/$(CSS_FILE)
+	@echo	"         url('$(call NEW_FILE_NAME,.ttf)') format('truetype')," >> dest/$(CSS_FILE)
 	@echo	"         url('$(call NEW_FILE_NAME,.svg#false)') format('svg');" >> dest/$(CSS_FILE)
 	@echo	"    font-weight: normal;" >> dest/$(CSS_FILE)
 	@echo	"    font-style: normal;" >> dest/$(CSS_FILE)
