@@ -1,3 +1,4 @@
+.PHONY: s simple w web generateTtf generateEot generateSvg generateWoff generateWoff2 generateCss help
 .DEFAULT_GOAL := help
 
 # Dependencies
