@@ -2,27 +2,39 @@
 
 Based on [fontfacegen](https://github.com/agentk/fontfacegen) without using Node.
 
-From a ttf or otf, generate the required ttf, eot, woff, svg and css for the font to be used in browers.
+Take a ttf or an otf, generate the required ttf, eot, woff, svg and css for web usage.
 
-### Usage
+## Getting started
 
-```shell
-make FONT_PATH=/path/to/a_font.{otf || ttf}
-```
-
-### Requirements
-
-* fontforge
+### Prerequisites
+* Fontforge
+* woff2_compress
 * ttf2eot
-* batik-ttf2svg 
+* Batik SVG Toolkit
 
-#### OS X installation
-
-On OS X, install with [homebrew](http://brew.sh/):
+### Installing on OS X
+On OS X, install with [Homebrew](http://brew.sh/):
 
 ```
-brew install fontforge ttf2eot batik
 brew tap bramstein/webfonttools
 brew update
-brew install woff2
+brew install fontforge ttf2eot batik woff2
+```
+
+### Installing on Ubuntu
+Clone and build the followings:
+
+* https://github.com/google/woff2
+* https://github.com/wget/ttf2eot
+
+Then with apt:
+
+```
+apt install libbatik-java fontforge
+```
+
+## Usage
+
+```shell
+make web FONT_PATH=/path/to/a_font.{otf || ttf}
 ```
