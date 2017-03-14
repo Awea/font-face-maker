@@ -43,7 +43,7 @@ generateEot:
 	$(TTF2EOT) "$(OUTPUT)$(call NEW_FILE_NAME,.ttf)" > "$(OUTPUT)$(call NEW_FILE_NAME,.eot)"
 
 generateSvg: 
-	$(TTF2SVG) "$(OUTPUT)$(call NEW_FILE_NAME,.ttf)" -id "false" -o "$(OUTPUT)$(call NEW_FILE_NAME,.svg)"
+	$(TTF2SVG) "$(OUTPUT)$(call NEW_FILE_NAME,.ttf)" -id "$(call NEW_FILE_NAME,)" -autorange -o "$(OUTPUT)$(call NEW_FILE_NAME,.svg)"
 
 generateWoff: 
 	$(FONTFORGE) -lang=ff -c 'Open($$1);Generate($$2, "", 8);' '$(FONT_PATH)' '$(OUTPUT)$(call NEW_FILE_NAME,.woff)' 2> /dev/null
