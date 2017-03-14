@@ -10,7 +10,7 @@ Take a ttf or an otf, generate the required ttf, eot, woff, svg and css for web 
 * Fontforge
 * woff2_compress
 * ttf2eot
-* Batik SVG Toolkit
+* [Batik SVG Toolkit](https://xmlgraphics.apache.org/batik/tools/font-converter.html)
 
 ### Installing on OS X
 On OS X, install with [Homebrew](http://brew.sh/):
@@ -38,3 +38,7 @@ apt install libbatik-java fontforge
 ```shell
 make web FONT_PATH=/path/to/a_font.{otf || ttf}
 ```
+
+### Options
+
+* `OUTPUT`: precise a path to output the generated files
