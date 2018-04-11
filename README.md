@@ -46,6 +46,8 @@ make css FONT_PATH=/path/to/a_font.otf
 make sass FONT_PATH=/path/to/a_font.otf
 ```
 
-### Options
+### Change output directory
 
-* `OUTPUT`: precise a path to output the generated files
+```
+make fonts FONT_PATH=/path/to/a_font.otf DEST=/my/dir/to-output-generated-fonts
+```
