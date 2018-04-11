@@ -1,16 +1,14 @@
-## Fontface Maker
+# Fontface Maker
 
 Based on [fontfacegen](https://github.com/agentk/fontfacegen) without using Node.
 
-Take a ttf or an otf, generate the required ttf, eot, woff, svg and css for web usage.
+Take an otf then generate the required ttf, woff, woff2 and css for web usage.
 
 ## Getting started
 
 ### Prerequisites
 * Fontforge
 * woff2_compress
-* ttf2eot
-* [Batik SVG Toolkit](https://xmlgraphics.apache.org/batik/tools/font-converter.html)
 
 ### Installing on OS X
 On OS X, install with [Homebrew](http://brew.sh/):
@@ -18,25 +16,34 @@ On OS X, install with [Homebrew](http://brew.sh/):
 ```
 brew tap bramstein/webfonttools
 brew update
-brew install fontforge ttf2eot batik woff2
+brew install fontforge woff2
 ```
 
 ### Installing on Ubuntu
-Clone and build the followings:
-
-* https://github.com/google/woff2
-* https://github.com/wget/ttf2eot
-
-Then with apt:
+Clone, build and add to your $PATH [woff2_compress](https://github.com/google/woff2). Then with apt:
 
 ```
-apt install libbatik-java fontforge
+apt install fontforge
 ```
 
 ## Usage
 
+### Generate webfonts 
+
 ```shell
-make web FONT_PATH=/path/to/a_font.{otf || ttf}
+make fonts FONT_PATH=/path/to/a_font.otf
+```
+
+### Generate webfonts and CSS file
+
+```shell
+make css FONT_PATH=/path/to/a_font.otf
+```
+
+### Generate webfonts and SASS file
+
+```shell
+make sass FONT_PATH=/path/to/a_font.otf
 ```
 
 ### Options
