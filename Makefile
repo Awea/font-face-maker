@@ -15,7 +15,14 @@ NEW_FILE_NAME = $(subst $(FONT_EXT),$(1),$(call FONT_NAME))
 CSS_FILE      = $(subst $(FONT_EXT),.css,$(call FONT_NAME))
 SASS_FILE     = $(subst $(FONT_EXT),.sass,$(call FONT_NAME))
 
+ifeq ($(FONT_EXT),.otf)
 fonts: dirs generateTtf generateWoff generateWoff2 ## Generate ttf, woff and woff2 from otf file
+else
+fonts: cpTTF dirs generateWoff generateWoff2 
+endif
+
+cpTTF: 
+	@cp $(FONT_PATH) $(DEST)
 
 css: fonts generateCSS ## Generate ttf, woff, woff2 and CSS file including font-face declarations
 	
