@@ -1,14 +1,12 @@
 # Fontface Maker
+A font-face generator for creating browser-usable fonts and CSS/Sass files from any OTF.
 
 Based on [fontfacegen](https://github.com/agentk/fontfacegen) without using Node.
-
-Take an otf then generate the required ttf, woff, woff2 and css for web usage.
 
 ## Getting started
 
 ### Prerequisites
 * Fontforge
-* woff2_compress
 
 ### Installing on OS X
 On OS X, install with [Homebrew](http://brew.sh/):
@@ -16,11 +14,10 @@ On OS X, install with [Homebrew](http://brew.sh/):
 ```
 brew tap bramstein/webfonttools
 brew update
-brew install fontforge woff2
+brew install fontforge
 ```
 
 ### Installing on Ubuntu
-Clone, build and add to your $PATH [woff2_compress](https://github.com/google/woff2). Then with apt:
 
 ```
 apt install fontforge
