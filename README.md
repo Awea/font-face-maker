@@ -1,4 +1,4 @@
-# Fontface Maker
+# Font-face maker
 A font-face generator for creating browser-usable fonts and CSS/Sass files from any OTF.
 
 Based on [fontfacegen](https://github.com/agentk/fontfacegen) without using Node.
