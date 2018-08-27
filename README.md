@@ -9,7 +9,7 @@ Based on [fontfacegen](https://github.com/agentk/fontfacegen) without using Node
 * [FontForge](https://fontforge.github.io/en-US/)
 
 ### Installing on macOS
-On macOS, install with [Homebrew](http://brew.sh/):
+Install with [Homebrew](http://brew.sh/):
 
 ```
 brew tap bramstein/webfonttools
@@ -40,7 +40,7 @@ make css FONT_PATH=/path/to/a_font.otf
 ### Generate webfonts and Sass file
 
 ```shell
-make Sass FONT_PATH=/path/to/a_font.otf
+make sass FONT_PATH=/path/to/a_font.otf
 ```
 
 ### Change output directory
