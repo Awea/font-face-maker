@@ -6,10 +6,10 @@ Based on [fontfacegen](https://github.com/agentk/fontfacegen) without using Node
 ## Getting started
 
 ### Prerequisites
-* Fontforge
+* [FontForge](https://fontforge.github.io/en-US/)
 
-### Installing on OS X
-On OS X, install with [Homebrew](http://brew.sh/):
+### Installing on macOS
+On macOS, install with [Homebrew](http://brew.sh/):
 
 ```
 brew tap bramstein/webfonttools
@@ -37,14 +37,14 @@ make fonts FONT_PATH=/path/to/a_font.otf
 make css FONT_PATH=/path/to/a_font.otf
 ```
 
-### Generate webfonts and SASS file
+### Generate webfonts and Sass file
 
 ```shell
-make sass FONT_PATH=/path/to/a_font.otf
+make Sass FONT_PATH=/path/to/a_font.otf
 ```
 
 ### Change output directory
 
 ```
-make fonts FONT_PATH=/path/to/a_font.otf DEST=/my/dir/to-output-generated-fonts
+make fonts FONT_PATH=/path/to/a_font.otf DEST=/path/to/output/webfonts
 ```

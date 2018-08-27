@@ -22,7 +22,7 @@ endif
 
 css: fonts generateCSS ## Generate ttf, woff, woff2 and CSS file including font-face declarations
 	
-sass: fonts generateSASS ## Generate ttf, woff, woff2 and SASS file including font-face declarations
+sass: fonts generateSASS ## Generate ttf, woff, woff2 and Sass file including font-face declarations
 
 dirs:
 	@mkdir -p $(DEST)
