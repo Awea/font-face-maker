@@ -7,6 +7,7 @@ WOFF2     := $(shell which woff2_compress)
 
 # Vars
 FONT_NAME := $(notdir $(FONT_PATH))
+FONT_EXT  := $(suffix $(FONT_NAME))
 DEST      ?= $(shell dirname $(FONT_PATH))
 
 # Functions
@@ -15,16 +16,16 @@ CSS_FILE      = $(subst $(FONT_EXT),.css,$(call FONT_NAME))
 SASS_FILE     = $(subst $(FONT_EXT),.sass,$(call FONT_NAME))
 
 ifeq ($(FONT_EXT),.otf)
-fonts: dirs fromOTF ## Generate ttf, woff and woff2 from otf file
+fonts: $(DEST)/$(FONT_NAME) fromOTF ## Generate ttf, woff and woff2 from otf file
 else
-fonts: dirs fromTTF 
+fonts: $(DEST)/$(FONT_NAME) fromTTF 
 endif
 
 css: fonts generateCSS ## Generate ttf, woff, woff2 and CSS file including font-face declarations
 	
 sass: fonts generateSASS ## Generate ttf, woff, woff2 and Sass file including font-face declarations
 
-dirs:
+$(DEST)/$(FONT_NAME):
 	@mkdir -p $(DEST)
 	@cp $(FONT_PATH) $(DEST)
 
