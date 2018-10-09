@@ -7,6 +7,7 @@ Based on [fontfacegen](https://github.com/agentk/fontfacegen) without using Node
 
 ### Prerequisites
 * [FontForge](https://fontforge.github.io/en-US/)
+* [woff2_compress](https://github.com/google/woff2)
 
 ### Installing on macOS
 Install with [Homebrew](http://brew.sh/):
@@ -14,10 +15,11 @@ Install with [Homebrew](http://brew.sh/):
 ```
 brew tap bramstein/webfonttools
 brew update
-brew install fontforge
+brew install fontforge woff2
 ```
 
 ### Installing on Ubuntu
+Clone and build [woff2](https://github.com/google/woff2) then add `woff2_compress` to your $PATH. Next with apt:
 
 ```
 apt install fontforge
