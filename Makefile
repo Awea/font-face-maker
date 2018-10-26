@@ -16,7 +16,7 @@ CSS_FILE      = $(subst $(FONT_EXT),.css,$(call FONT_NAME))
 SASS_FILE     = $(subst $(FONT_EXT),.sass,$(call FONT_NAME))
 
 ifeq ($(FONT_EXT),.otf)
-fonts: $(DEST)/$(FONT_NAME) fromOTF ## Generate ttf, woff and woff2 from otf file
+fonts: $(DEST)/$(FONT_NAME) fromOTF generateWoff2 ## Generate ttf, woff and woff2 from otf file
 else
 fonts: $(DEST)/$(FONT_NAME) fromTTF generateWoff2
 endif
